@@ -165,6 +165,4 @@ HEADERS  +=  qcdrawview.h \
 RESOURCES += \
     Image/image.qrc
 
-FORMS += \
-    Widgets/shrinkwidget.ui
 

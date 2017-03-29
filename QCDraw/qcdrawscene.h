@@ -189,8 +189,6 @@ public:
     void selectScene(QPointF &point);
     //将框选范围内的元件置为选中
     void showSelectSceneItems(QPointF& point);
-    ShrinkTick* addNewChaDong(Graphic* parentGraphic);
-    void clearChaDong();
 
 signals:
     ///
@@ -254,7 +252,6 @@ private:
     //使得给定点始终在当前矩形内部
     void	limitPoint(QPointF& scenePoint );
 
-    QMap<ulong64,ShrinkTick*> _chaDongAll;
     QCDrawView* _view;//视图
 
     IDCreator _idCreator;//创建的ID

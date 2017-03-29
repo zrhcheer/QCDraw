@@ -6,7 +6,6 @@
 #include "rapidxml/rapidxml_utils.hpp"
 
 #include "groupgraphicbase.h"
-#include "Widgets/shrinktick.h"
 
 const QString BusGraphic::_devName = CodeConvertor::fromLocal("母线");
 
@@ -296,10 +295,7 @@ void BusGraphic::setPosition(const QPointF& pos)
     {
         _captionGraphic->setPos(_captionGraphic->pos() + movePoint);
     }
-    if(_shrink)
-    {
-        _shrink->setPos(_shrink->pos() + movePoint);
-    }
+
     this->setLine(lineBus);
     //this->setPos(pos);
     //对线进行移动

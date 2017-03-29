@@ -18,7 +18,6 @@
 #include <QGraphicsProxyWidget>
 #include "Graphics/graphiccursor.h"
 #include <QApplication>
-#include "Widgets/shrinktick.h"
 
 
 QCDrawScene::QCDrawScene(QObject *parent) :
@@ -35,7 +34,6 @@ QCDrawScene::QCDrawScene(QObject *parent) :
     _isSelectScene = false;
     _rectItem = NULL;
     _config = NULL;
-    _chaDongAll.clear();
 }
 QCDrawScene::QCDrawScene(const GraphicConfig* config,QObject *parent)  :
         QGraphicsScene(parent) ,
@@ -128,51 +126,6 @@ bool QCDrawScene::loadPixmap(QPixmap& pix)
     QPainter painter(&pix);
     this->render(&painter);   //¹Ø¼üº¯Êý
     return true;
-}
-
-ShrinkTick* QCDrawScene::addNewChaDong(Graphic* parentGraphic)
-{
-    QMap<ulong64,ShrinkTick*>::Iterator iterChaDong = _chaDongAll.find(parentGraphic->getID());
-    if(iterChaDong != _chaDongAll.end())
-    {
-        return iterChaDong.value();
-    }
-    ShrinkTick* graphicWidget = new ShrinkTick;
-    QGraphicsScene::addItem(graphicWidget);
-    _chaDongAll.insert(parentGraphic->getID(),graphicWidget);
-    QPointF tmpPt(0,0);
-    if(Graphic::GRAPHIC_LINE == parentGraphic->getType())
-    {
-        LineGraphic* lineGraphic = dynamic_cast<LineGraphic*>(parentGraphic);
-        tmpPt = lineGraphic->getCenterPoint();
-    }
-//    else if(Graphic::GRAPHIC_BUS== parentGraphic->getType())
-//    {
-//        BusGraphic* bus = dynamic_cast<BusGraphic*>(parentGraphic);
-//    }
-    else
-    {
-        tmpPt = parentGraphic->getPosition();
-        const QSize& sz = parentGraphic->getSize();
-        tmpPt.setX(tmpPt.x() + sz.width() / 2);
-    }
-    tmpPt.setY(tmpPt.y() - 35);
-    graphicWidget->setGeometry(QRectF(tmpPt,QSize(70,60)));
-    //proxyWidget->setParentItem(curItem);
-    parentGraphic->setShrink(graphicWidget);
-
-    return graphicWidget;
-}
-
-void QCDrawScene::clearChaDong()
-{
-    for(QMap<ulong64,ShrinkTick*>::Iterator iterChaDong = _chaDongAll.begin();
-       iterChaDong !=  _chaDongAll.end(); ++iterChaDong)
-    {
-        ShrinkTick* tmpChaDong = iterChaDong.value();
-        delete tmpChaDong;
-    }
-    _chaDongAll.clear();
 }
 
 void QCDrawScene::removeGraphicItem(Graphic * item,bool bDel)

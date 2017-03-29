@@ -5,7 +5,6 @@
 #include "rapidxml/rapidxml.hpp"
 #include "rapidxml/rapidxml_print.hpp"
 #include "rapidxml/rapidxml_utils.hpp"
-#include "Widgets/shrinktick.h"
 
 const QString LineGraphic::_devName = CodeConvertor::fromLocal("ÏßÂ·");
 
@@ -1768,10 +1767,6 @@ bool LineGraphic::setBeginPoint(const QPointF& beginPoint)
         {
             _captionGraphic->setPos(_captionGraphic->pos() + centerAfterPt - centerPt);
         }
-        if(_shrink)
-        {
-            _shrink->setPos(_shrink->pos() + centerAfterPt - centerPt);
-        }
         _portPoints[Graphic::JOIN_BEGIN].setJoinPoint(beginPoint);
        setBeginTick();
        if(_tickMid)
@@ -1856,10 +1851,7 @@ bool LineGraphic::setEndPoint(const QPointF& endPoint)
         {
             _captionGraphic->setPos(_captionGraphic->pos() + centerAfterPt - centerPt);
         }
-        if(_shrink)
-        {
-            _shrink->setPos(_shrink->pos() + centerAfterPt - centerPt);
-        }
+
 
         _portPoints[Graphic::JOIN_END].setJoinPoint(endPoint);
 

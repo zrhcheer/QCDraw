@@ -7,7 +7,6 @@
 #include "rapidxml/rapidxml.hpp"
 #include "rapidxml/rapidxml_print.hpp"
 #include "rapidxml/rapidxml_utils.hpp"
-#include "Widgets/shrinktick.h"
 
 GraphicBase::GraphicBase(QGraphicsItem * parent) :
     QGraphicsItem(parent)
@@ -479,10 +478,6 @@ void GraphicBase::setPosition(const QPointF& pos)
 {
     QPointF movePoint = pos - this->pos();
     this->setPos(pos);
-    if(_shrink)
-    {
-        _shrink->setPos(_shrink->pos() + movePoint);
-    }
     //对线进行移动
     for(QVector<GraphicPort>::Iterator iterPort = _port.begin();
         iterPort != _port.end(); ++iterPort)

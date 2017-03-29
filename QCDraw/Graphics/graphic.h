@@ -365,8 +365,6 @@ public:
         return false;
     }
 
-    void setShrink(ShrinkTick* shrink);
-
 protected:
     int _direct;//方向
     int _type;//类型

@@ -84,25 +84,7 @@ SOURCES += qcdrawview.cpp \
     Timer/timeval.cpp \
     Graphics/lineflow.cpp \
     SpecialGraphics/dynamicpointgraphic.cpp \
-    ChaDong/Qt_CoordinateConvert.cpp \
-    ChaDong/G_EnvironmentalVaraible.cpp \
-    ChaDong/CdRound.cpp \
-    ChaDong/CdRect.cpp \
-    ChaDong/CdQuardrangle.cpp \
-    ChaDong/cdpolygon.cpp \
-    ChaDong/CdPoint.cpp \
-    ChaDong/CdLine.cpp \
-    ChaDong/CdDataCalculateTool.cpp \
-    ChaDong/CdData.cpp \
-    ChaDong/CdCoordinate.cpp \
-    ChaDong/DataAdaptor.cpp \
-    ChaDong/Qt_Painter.cpp \
-    ChaDong/roundandquardrangle.cpp \
-    ChaDong/cdarc.cpp \
-    Widgets/pixwidget.cpp \
-    Widgets/shrinkwidget.cpp \
-    Graphics/graphic.cpp \
-    Widgets/shrinktick.cpp
+    Graphics/graphic.cpp
 
 
 HEADERS  +=  qcdrawview.h \
@@ -178,25 +160,7 @@ HEADERS  +=  qcdrawview.h \
     rapidxml/rapidxml_print.hpp \
     rapidxml/rapidxml_utils.hpp \
     Graphics/lineflow.h \
-    SpecialGraphics/dynamicpointgraphic.h \
-    ChaDong/Qt_CoordinateConvert.h \
-    ChaDong/G_EnvironmentalVaraible.h \
-    ChaDong/CdRound.h \
-    ChaDong/CdRect.h \
-    ChaDong/CdQuardrangle.h \
-    ChaDong/cdpolygon.h \
-    ChaDong/CdPoint.h \
-    ChaDong/CdLine.h \
-    ChaDong/CdDataCalculateTool.h \
-    ChaDong/CdData.h \
-    ChaDong/CdCoordinate.h \
-    ChaDong/DataAdaptor.h \
-    ChaDong/Qt_Painter.h \
-     ChaDong/roundandquardrangle.h \
-    ChaDong/cdarc.h \
-    Widgets/pixwidget.h \
-    Widgets/shrinkwidget.h \
-    Widgets/shrinktick.h
+    SpecialGraphics/dynamicpointgraphic.h
 
 RESOURCES += \
     Image/image.qrc

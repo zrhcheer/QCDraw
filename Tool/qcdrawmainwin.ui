@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QCDrawMainWin</class>
+ <widget class="QMainWindow" name="QCDrawMainWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>588</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QCDrawMainWin</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <action name="delAction">
+   <property name="icon">
+    <iconset resource="../QCDraw/Image/image.qrc">
+     <normaloff>:/anchor.png</normaloff>:/anchor.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="rotateAction">
+   <property name="text">
+    <string>旋转</string>
+   </property>
+   <property name="toolTip">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="mirrorAction">
+   <property name="text">
+    <string>镜像</string>
+   </property>
+   <property name="toolTip">
+    <string>镜像</string>
+   </property>
+  </action>
+  <action name="verBusAction">
+   <property name="text">
+    <string>纵向母线</string>
+   </property>
+   <property name="toolTip">
+    <string>纵向母线</string>
+   </property>
+  </action>
+  <action name="horBusAction">
+   <property name="text">
+    <string>横向母线</string>
+   </property>
+   <property name="toolTip">
+    <string>横向母线</string>
+   </property>
+  </action>
+  <action name="inLineAction">
+   <property name="text">
+    <string>站内线</string>
+   </property>
+   <property name="toolTip">
+    <string>站内线</string>
+   </property>
+  </action>
+  <action name="interLineAction">
+   <property name="text">
+    <string>站间线</string>
+   </property>
+   <property name="toolTip">
+    <string>站间线</string>
+   </property>
+  </action>
+  <action name="inVirLineAction">
+   <property name="text">
+    <string>站内连线</string>
+   </property>
+   <property name="toolTip">
+    <string>站内连线</string>
+   </property>
+  </action>
+  <action name="intervirLineAction">
+   <property name="text">
+    <string>站间连线</string>
+   </property>
+   <property name="toolTip">
+    <string>站间连线</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="delConnAction">
+   <property name="text">
+    <string>删除连接</string>
+   </property>
+   <property name="toolTip">
+    <string>删除连接</string>
+   </property>
+  </action>
+  <action name="delKneeAction">
+   <property name="text">
+    <string>删除拐点</string>
+   </property>
+   <property name="toolTip">
+    <string>删除拐点</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../QCDraw/Image/image.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>delConnAction</sender>
+   <signal>triggered()</signal>
+   <receiver>QCDrawMainWin</receiver>
+   <slot>delSelectJoin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>delSelectJoin()</slot>
+ </slots>
+</ui>

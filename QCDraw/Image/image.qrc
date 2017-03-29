@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>tri.png</file>
+        <file>pen.png</file>
+        <file>anchor.png</file>
+        <file>virlineinter.png</file>
+        <file>virlineadd.png</file>
+        <file>lineadd.png</file>
+        <file>busadd.png</file>
+        <file>chadong.png</file>
+    </qresource>
+</RCC>

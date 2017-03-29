@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/delete.png</file>
+        <file>images/background4.png</file>
+        <file>images/background3.png</file>
+        <file>images/background2.png</file>
+        <file>images/background1.png</file>
+        <file>images/btncheck.png</file>
+        <file>images/piecheck.png</file>
+        <file>images/polarcheck.png</file>
+        <file>images/comboxcheck.png</file>
+        <file>images/comboxuncheck.png</file>
+        <file>images/labelcheck.png</file>
+        <file>images/labeluncheck.png</file>
+        <file>images/polycheck.png</file>
+        <file>images/polyuncheck.png</file>
+        <file>images/tablecheck.png</file>
+        <file>images/tableuncheck.png</file>
+    </qresource>
+</RCC>

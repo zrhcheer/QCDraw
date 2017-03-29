@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QCDrawDlg</class>
+ <widget class="QDialog" name="QCDrawDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QCDrawDlg</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="ToolWidget" name="toolWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>82</width>
+          <height>338</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCDrawView" name="canvasView" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCDraw/QCDrawView</class>
+   <extends>QWidget</extends>
+   <header>qcdrawview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ToolWidget</class>
+   <extends>QWidget</extends>
+   <header>toolwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
